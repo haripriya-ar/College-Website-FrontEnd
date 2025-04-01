@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Brown - Alumni Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMU8KIpLU5YpSGxk2rOOsABq8I95dvsOBqpfQ99" crossorigin="anonymous" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #bd2727;
+            color: #fff;
+        }
+
+        nav .logo {
+            height: 60px;
+        }
+
+        nav .navigation ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav .navigation ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav .navigation ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav .navigation ul li a.active {
+            font-weight: bold;
+        }
+
+        nav .navigation ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #bd2727;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .navigation ul li .dropdown li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav .navigation ul li .dropdown li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav .navigation ul li:hover .dropdown {
+            display: block;
+        }
+
+        nav .navigation #menu-btn,
+        nav .navigation #menu-close {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            nav .navigation ul {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: #333;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: left 0.3s ease;
+            }
+
+            nav .navigation ul.active {
+                left: 0;
+            }
+
+            nav .navigation #menu-btn {
+                display: block;
+            }
+
+            nav .navigation #menu-close {
+                display: block;
+            }
+
+            nav .navigation ul li .dropdown {
+                position: static;
+            }
+        }
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        .content h1 {
+            color: #bd2727;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .content .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .details p {
+            margin: 0;
+            color: #666;
+        }
+
+        footer {
+            background-color: #C62828;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.png" class="logo" alt="Logo">
+        <div class="navigation">
+            <ul>
+                <li><a href="MAIN_abt.html">Home</a></li>
+                <li>
+                    <a href="#" class="active">Academics</a>
+                    <ul class="dropdown">
+                        <li><a href="courses.html">Undergraduate Programmes</a></li>
+                        <li><a href="pgcourses.html">Postgraduate Programmes</a></li>
+                        <li><a href="phd.html">PhD Programmes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="active">Admission</a>
+                    <ul class="dropdown">
+                        <li><a href="BTECHADM.html">Undergraduate Programmes</a></li>
+                        <li><a href="MTECHADM.html">Postgraduate Programmes</a></li>
+                        <li><a href="DOCTORAL.html">PhD Programmes</a></li>
+                    </ul>
+                </li>
+                <li><a href="alumni.html" class="active">Alumni</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <img src="alumni3.jpg" alt="Robert Brown">
+        <h1>Dr. Ranjan R Pai</h1>
+        <div class="details">
+            <p><strong>Class of 2018</strong></p>
+            <p><strong>Product Manager at Microsoft</strong></p>
+        </div>
+        <p>Dr. Ranjan R Pai is a distinguished product manager at Microsoft. Graduating in 2018, Robert quickly advanced in his career by showcasing his exceptional skills in project management and product development. He has been instrumental in launching several successful software products that have significantly contributed to Microsoft's portfolio.</p>
+        <p>Ranjan's role involves coordinating cross-functional teams to ensure seamless product delivery and continuous improvement. His strategic vision and ability to navigate complex challenges have earned him a reputation as a reliable and innovative leader. Ranjan actively mentors young professionals and is committed to fostering a culture of innovation and excellence within his team. His journey from a dedicated student at ASTRA College of Engineering to a key player at Microsoft exemplifies his dedication and talent.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ASTRA COLLEGE OF ENGINEERING. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

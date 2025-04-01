@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Page</title>
+    <style>
+        .NavAd{
+            width: 100%;
+            height: 700px;
+            background-image: url(https://sacsmeharry.org/wp-content/uploads/2021/01/iStock-1081869346.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow: auto;
+        }
+        .NavAd a{
+            float: left;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .AdmForm{
+            width:300px;
+            height:550px ;
+            padding: 3px;
+            background-color:rgba(128, 128, 128, 0.388);
+            margin-left: auto;
+            margin-right: 100px;
+            margin-top: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        .AdForm{
+            padding: 5px;
+            text-align: center;
+            color: aliceblue;
+        }
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(3, 3, 49);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+.container{
+      display: flex; /* Use flexbox for layout */
+    }
+
+    .text {
+        margin-left: 10%;
+      margin-right: 10%; /* Add some space between the text */
+      font-size: xx-large;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid white;
+      
+      padding: 5px;
+      font-size: xx-large;
+      font-weight: bolder;
+    }
+    .vertical-line {
+      border-right: 1px solid black;
+    }
+    .column1 {
+  float: left;
+  width: 49.55%;
+  padding: 3px;
+  background-color: rgba(128, 128, 128, 0.808);
+}
+.column2 {
+  float: right;
+  width: 49.55%;
+  padding: 3px;
+  background-color:  rgba(128, 128, 128, 0.808);;
+  text-align: center;
+}
+/* Clear floats after image containers */
+.row::after {
+ 
+  
+  background-color: grey;
+}
+
+    </style>
+</head>
+<body>
+    <h2 class="heading">RESEARCH</h2>
+    <div class="navbar">
+      <a href="MAIN_abt.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Academics
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="BTECHADM.html">B-Tech</a>
+          <a href="MTECHADM.html">M-Tech</a>
+          <a href="DOCTORAL.html">PhD</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Admission 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="BTECHADM.html">B-Tech</a>
+          <a href="MTECHADM.html">M-Tech</a>
+          <a href="DOCTORAL.html">Phd</a>
+        </div>
+      </div>
+      <a href="alumni.html">Alumni</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <div class="NavAd">
+    <div class="AdmForm">
+    
+        <table class="AdForm">
+           <h1>Piomeering Innovations for Soceital Bennefit</h1><br>
+           <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: large;">Our college has broken barriers<br>
+             and attainedglobal recognition for its work.<br> With a focus
+             on innovative thinking,<br>integrated research,and
+              understanding <br> and meeting the needs of the future,<br>
+              reasearches strive to develop solutions<br> with real world applications<br>
+              for the betterment of soceity.</h3>
+               
+        </table>
+    </div>
+    </div>
+    </div>
+    <br><br>
+<table>
+  <tr>
+    <td class="vertical-line">500+</td>
+    <td class="vertical-line">1400+</td>
+    <td class="vertical-line">150+</td>
+  </tr>
+  <tr>
+    <td class="vertical-line">Research Projects</td>
+    <td class="vertical-line">Publications</td>
+    <td class="vertical-line">Patents</td>
+  </tr>
+</table>
+<br><br>
+<div class="row">
+    <div class="column1">
+        <img id="achieve1" src="Research pic01.png">
+    </div>
+    <div class="column1">
+        <img id="achieve2" src="Research pic02.png" >
+    </div>
+  </div>
+  <br><br>
+  <div class="row"></div>
+  <div class="column2">
+    <img id="achieve3" src="Research pic03.png" >
+</div>
+<div class="column2">
+    <img id="achieve4" src="Research pic04.png" >
+</div>
+</div>
+
+    <script>
+  
+        // Get the image element
+        var clickableImage = document.getElementById("achieve1");
+      
+        // Add a click event listener
+        clickableImage.addEventListener("click", function() {
+          // Redirect to the specified URL
+          window.open("Research01.pdf", "_blank");
+        });
+      
+      </script>
+      <script>
+  
+        // Get the image element
+        var clickableImage = document.getElementById("achieve2");
+      
+        // Add a click event listener
+        clickableImage.addEventListener("click", function() {
+          // Redirect to the specified URL
+          window.open("Research02.pdf", "_blank");
+        });
+      
+      </script>
+      <script>
+  
+        // Get the image element
+        var clickableImage = document.getElementById("achieve3");
+      
+        // Add a click event listener
+        clickableImage.addEventListener("click", function() {
+          // Redirect to the specified URL
+          window.open("Research03.pdf", "_blank");
+        });
+      
+      </script>
+      <script>
+  
+        // Get the image element
+        var clickableImage = document.getElementById("achieve4");
+      
+        // Add a click event listener
+        clickableImage.addEventListener("click", function() {
+          // Redirect to the specified URL
+          window.open("Research04.pdf", "_blank");
+        });
+      
+      </script>
+      
+</body>
+</html>

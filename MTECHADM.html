@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Admission</title>
+   
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        @keyframes slide {
+            from{
+                transform: translateX(300px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        .heading{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            animation-name:  slide;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay:0.5s;
+            float:right;
+        }
+        .NavAd{
+            width: 100%;
+            height: 700px;
+            background-image: url(https://cache.careers360.mobi/media/article_images/2021/12/2/Features_image_-_Upskilliing_and_short_term_courses_.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow: auto;
+            left:0%;
+        }
+        .NavAd a{
+            float: left;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .Implink{
+             
+            padding: 3px;
+             background-color: rgb(0, 155, 127);
+             margin-left: auto;
+             margin-right: 100px;
+            
+             text-align: center;
+             justify-content: center;
+             align-items: center;
+             border-radius: 5px;
+             box-shadow: 5px rgb(255, 253, 253);
+             float:right;
+        }
+       
+        .sidebar {
+    width: 200px;
+    background-color: rgba(0, 155, 127, 0.702);
+    position:absolute;
+    top: 20%;
+    left: 0%;
+    bottom: 0%;
+    margin-left:10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 20px;
+}
+
+.sidebar button {
+    display: block;
+    margin-bottom: 10px;
+    border:none;
+    font-size: large;
+    border-radius: 5px;
+    width:155px;
+    height: 55px;
+    color: aliceblue;
+    background-color: rgb(0, 155, 127);
+    text-align: center;
+    
+   
+}
+.sidebar button:hover{
+  width: 160px;
+  height: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ul{
+    list-style-type: none;
+}
+.AAT{
+    background-color: rgb(0, 155, 127);
+    border-color:rgb(0, 155, 127);
+  
+
+}
+.HomeP{
+    display:block;
+    
+}
+.AAT:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#elig{
+        color:rgb(255, 200, 0);
+        font-family:monospace;
+        text-align: center;
+    }
+.Eligbox{
+    display:none;
+        float:right;
+        margin-right:50px;
+        background-color: rgb(0, 155, 127); 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width:40%;
+    }
+    #nav:hover {
+        background-color: rgba(32, 32, 32, 0.615);
+    }
+    #nav1:hover{
+        background-color: rgba(132, 132, 132, 0.615);
+    }
+    .Y{
+        background-repeat: no-repeat;
+        background-image: url(https://media.gettyimages.com/id/1455946567/photo/college-instructor-assisting-electrical-engineering-students.jpg?s=612x612&w=gi&k=20&c=8-zcXsxvbViqnMdGOtwB5uJxF51Fq0Dv07YbfJ7_UW0=);
+        width:50%;
+        height:400px;
+        
+    }
+    .YM{
+        background-color: rgba(0, 183, 116, 0.718);
+        width:99%;
+        height:100%;
+      
+    }
+    .AdmDrp{
+        display: none;
+        margin-top:40px;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 10px;
+    }
+    .AdmDrp1{
+        display: none;
+        margin-top:40px;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 20px;
+    }
+    .AdmDrp a,.AdmDrp1 a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+   .AdB1:hover .AdmDrp{
+    display:block;
+   }
+   .AdB2:hover .AdmDrp1{
+    display:block;
+   }
+   .ImpDat,.FeeStruct{
+            display: none;
+            float: right;
+            margin-right: 10%;
+            background-color: rgba(8, 8, 8, 0.753);
+            padding: 5px;
+            width:50%;
+            color:#f1f1f1;
+        } 
+        td{
+            background-color: rgb(255, 243, 187);
+            border-radius: 5px;
+            padding:10px;
+            color:black;
+        }
+        #yel{
+            background-color:  rgb(0, 168, 140);
+            border-radius: 5px;
+            padding:10px;
+            color:rgb(255, 255, 255);
+        }
+        .Scholarship{
+            background-color: rgb(0, 177, 153);
+            float:right;
+            margin-right: 10%;
+            display: none;
+            width:50%;
+            padding:5px;
+        }
+        footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;}
+    .sub{
+ float: left; 
+}
+@media screen and (min-width: 992px) {
+
+}
+    </style>
+</head>
+<body>
+    <div class="sub">
+        <img src="Logo pic.png" alt="Image" class="left-image" width="55" height="55">
+        
+    </div>
+    <h2 class="heading">MTech ADMISSION</h2>
+<div class="NavAd">
+    <a href="MAIN_abt.html" id="nav"> Home</a> 
+    <div class="AdB2">
+        <a id="nav" class="AdB3"><button class="BA1" style="border:none;background-color: transparent;color: aliceblue;font-family: 'Times New Roman', Times, serif;font-size: 17px;">Academics</button>
+        <div class="AdmDrp1">
+            <a href="courses.html" id="nav1">B.Tech</a>
+            <a href="pgcourses.html" id="nav1">M.Tech</a>
+            <a href="phd.html" id="nav1">Doctral Programs</a>
+        </div> 
+        </a>
+    </div> 
+    <div class="AdB1">
+    <a id="nav" class="AdB"><button class="BA" style="border:none;background-color: transparent;color: aliceblue;font-family: 'Times New Roman', Times, serif;font-size: 17px;">Admission</button>
+    <div class="AdmDrp">
+        <a href="BTECHADM.html" id="nav1">B.Tech</a>
+        <a href="#" id="nav1">M.Tech</a>
+        <a href="DOCTORAL.html" id="nav1">Doctral Programs</a>
+    </div> 
+    </a>
+</div> 
+    <a href="alumni.html" id="nav">Alumni</a>
+    <a href="contact.html" id="nav">Contact</a><br><br><br>
+   
+    <div class="sidebar">
+    <ul>
+        <li><button onclick="showDiv('HomeP')">Home</button></li><br>
+        <li><button onclick="showDiv('Eligbox')" type="button">Eligibility</button></li><br>
+        <li><button onclick="showDiv('Scholarship')">Scholarships</button></li><br>
+        <li><button onclick="showDiv('FeeStruct')" >Fee Structure</button></li><br>
+        <li><button onclick="showDiv('ImpDat')">Important dates</button></li><br>
+    </ul>
+    </div>
+    <div id="common" class="ImpDat">
+        <h2>Important Dates for SECOND Degree Programme</h2>
+        <hr style="width: auto;">
+        <p>IMPORTANT DATES FOR SECOND DEGREE ADMISSION 2024-25</p>
+        <table>
+            <tr>
+                <td>EVENT</td>
+                <td>Date</td>
+            </tr>
+            <tr>
+                <td>Last date of Application</td>
+                <td>25june 2024</td>
+            </tr>
+            <tr>
+                <td>Admission Test/Interviews</td>
+                <td>27 Aug 2024</td>
+            </tr>
+            <tr>
+                <td>Orientation & Registratione</td>
+                <td>27-30 Aug</td>
+            </tr>
+            
+            <tr>
+                <td>Commencement of Classes</td>
+                <td>2 Sep 20204</td>
+            </tr>
+        </table>
+    </div>
+    <div id="common" class="Scholarship">
+        <h1>Scholarships and Concessions for Higher Degree Programmes
+            Academic Year 2024-2025</h1>
+      <hr style="width: auto;">
+      <ol style="list-style-type: 1;">
+        <li>For New Admissions
+            <ul>
+                <li>For New Admissions
+                    <ul>
+                        <li>uition Fee Scholarship: Students who have obtained 75% or above in the aggregate of the Qualifying Examination are given a merit scholarship of 20% of first semester tuition fee.</li>
+                        <li>Hostel Fee Concession: Admitted Candidates who have obtained 80% or above in the aggregate of the Qualifying Examination will be offered a 25% concession in the Hostel fee for the normal duration of the programme (two years).</li>
+                    </ul>
+                </li>
+                <li>For Gate Qualifiying 
+                    <ul>
+                        <li>Above 87% about 50% scholarship</li>
+                        <li>>=50% will get about 20% scholarship</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Merit Scholarship for continuing students:
+            <p>Students with a CGPA of 9.00 or above on a 10.00 scale at the end of previous semester will be given a merit scholarship of 20% of tuition fee for the current semester for the normal duration of the programme.</p>
+        </li>
+
+      </ol>
+    </div>
+    <div id="common" class="FeeStruct">
+        <div>
+            <h3 style="color: #f1f1f1;">Fee Structure of MTECH Programme</h3>
+            <hr style="width:auto;background-color: rgb(255, 255, 255);height: 2px;">
+            <table class="FeeStruct1">
+                <tr>
+                    <td id="yel" style="padding:0px;border-radius: 0px;" colspan="2">A. One-time Fee</td>
+                    <td id="yel" style="padding:0px;border-radius: 0px;" colspan="2"> B. Tution Fees</td>
+                </tr>
+                <tr>
+                    <td>Application Fee*</td>
+                    <td>Rs.1000/-</td>
+                    <td rowspan="2">First Semester
+                        (payable in 2 installments)*</td>
+                    <td  rowspan="2">Rs 5 lakh</td>
+                </tr>
+                <tr>
+                    <td>Admission Fee*</td>
+                    <td>Rs.1500/-</td>
+                    
+                </tr>
+                <tr>
+                    <td>Caution Fees*</td>
+                    <td>Rs 10,000/-</td>
+                    <td >Second Semester
+                        (payable in 2 installments)*</td>
+                    <td>Rs 5 lakh</td>
+                </tr>
+            </table>
+        </div>
+        <h4>Refund Policy</h4>
+        <ol>
+            <li>One-time
+                <ul>
+                    <li>
+                        Application fee and Admission Fee are non-refundable.
+                    </li>
+                    
+                </ul>
+            </li>
+            <li>
+                Application fee and Admission Fee are non-refundable. 
+                <ul type="circle">
+                   <li>If a student accepts the admission offer and completes the admission formalities but withdraws before the date of registration, 80% of the first installment of tuition fee is refundable.</li> 
+                   <li>If a student withdraws within one week of the date of registration irrespective of whether the student registers or not, 50% of the first installment of first semester tuition fee is refundable.</li> 
+                   <li>If a student withdraws after one week of the date of registration irrespective of whether the student registers or not, the first installment of first semester tuition fee is non- refundable.</li>
+                </ul>
+                
+            </li>
+            
+        </ol>
+    </div>
+    <div id="common" class="Eligbox">
+        <h1 id="elig">Eligibility criteria for M.Tech</h1>
+        <hr style="background-color: rgb(255, 200, 0); height: 1px;width: 300px;">
+        <ul>
+            <li><p>The following eligibility criteria is applicable for admission to ACE. A candidate seeking admission to a particular programme has to meet the eligibility criteria for that programme as given below:
+            </p></li>
+            <li>A minimum aggregate of 60% in the qualifying degree as indicated below for each programme.</li><br>
+            <li>M.E. Design: B.E./B.Tech. in Mechanical Engineering or its equivalent.</li>
+            <li>M.E. Electrical (Power Electronics & Drive): B.E./B.Tech. in EEE, E&I or ECE or its equivalent.</li>
+            <li>M.E. Microelectronics: B.E./B.Tech. in EEE/E&I/ECE/CS or M.Sc. Physics or its equivalent.</li>
+            <li>M.E. Software Systems: B.E./B.Tech./M.Sc./M.C.A or equivalent.</li>
+            <li>M.E. Civil (Infrastructure Engg. & Mgmt.) : B.E./B.Tech. in Civil Engineering or its equivalent. (B.E. Mechanical & Electrical may also be considered with some deficiency courses)</li>
+            <li>       <p>Candidates who meet the above criteria will be required to appear and successfully clear the Aptitude test/Interview to qualify for admission.</p></li>
+        </ul>
+  </div>
+    <div id="common" class="HomeP" style="background-color: rgba(72, 71, 71, 0.552);width:300px;justify-content: center;float:right; margin-right:150px;margin-top:100px;padding:10px"><h1 style="color: aliceblue;">Admissions 2024-25 Open<br>Apply Now</h1>
+        <button type="button" class="AAT"><a href="AAT2.html" target="_blank">APPLY HERE</a></button></div>
+    </div>
+</div>
+<div style="float: right; padding:5px; width: 50%; background-color: rgb(66, 66, 66);color: #f1f1f1;text-align: center;height: 100%;">
+    <p style="font-size: large; margin-right: 20px;">Admission Enquiry</p>
+    <hr style="width:auto">
+    <div style="float:left;font-size: large;">
+        <p>Contact Us</p>
+        <ul style="list-style-type:circle;color:white;">
+            
+            <li>e-mail - astaram@gmail.com </li>
+            <li>Phone No- +91 54744746</li>
+            <br><br><br><br><br><br><br><br><br><br>
+        </ul>
+    </div>
+    </div>
+<div class="Y">
+    <div class="YM">
+        <br><br>
+    <hr style="width:20px;height: 2px;border-radius: 2px;background-color: aliceblue; float:left;margin-left:10px;"><br>
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: aliceblue;">&nbspWHY ASTRA?</h1>
+    <table >
+        <tr>
+            <td style="background-color: transparent;"><i class="fa fa-university fa-3x" aria-hidden="true" style="color: aliceblue;margin-left:30px;"></i></td>
+            <td style="background-color: transparent;"><p style="color:aliceblue">Top Rank University of India</p></td>
+        </tr>
+        <tr>
+           
+                <td style="background-color: transparent;"><br><br></td>
+                <td style="background-color: transparent;"><br><br></td>
+            
+        </tr>
+        <tr>
+            <td style="background-color: transparent;"><i class="fa fa-tree fa-3x" aria-hidden="true" style="color: aliceblue;margin-left:30px;"></i></td>
+            <td style="background-color: transparent;"><p style="color:aliceblue">Ecofriendly structures <br>& scenic campus</p></td>
+        </tr>
+    </table>
+    </div>
+</div>
+<div class="A">
+
+</div>
+   <script>
+  function showDiv(divclass) {
+           var allDivs = document.querySelectorAll('#common')
+            for (var i = 0; i < allDivs.length; i++) {
+                allDivs[i].style.display = 'none'; // Hide all divs
+            }
+            var divsToShow = document.getElementsByClassName(divclass);
+            for (var j = 0; j < divsToShow.length; j++) {
+                divsToShow[j].style.display = 'block'; // Show the selected div
+            }
+        }
+</script> 
+<footer style="width:auto;">
+    <p>&copy; 2024 Astra College of Engineering. All rights reserved.</p>
+  </footer>
+</body>
+</html>

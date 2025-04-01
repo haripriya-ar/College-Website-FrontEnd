@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.text {
+    position: absolute;
+    top: 88%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+  width: 100%;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://www.vvitguntur.com/images/2018-19_Events/Academic/MYB_Outstanding/Bhanumurthy_Receiving_award_at_chennai.JPG" style="width:100%;height:500px;">
+            <div class="text"><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The award was constituted by Venus International Foundation with a mission to recognize extraordinary teachers<br>
+                 who have demonstrated excellence in engaging their students in Inspiring - Innovative - Path breaking ways to ignite <br>
+                 their potential and the award is bestowed upon those faculties who have exceptional teaching records and a commitment <br>
+                 to high standards of professional life.  </p></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://northtexan.unt.edu/sites/default/files/2014_winter_feature_faculty-excellence_14_527_facexcellenceaward_157_large.jpg" style="width:100%;height:500px;">
+            <div class="text"><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The university celebrated Salute to Faculty Excellence Week,<br>
+                 with UNT's highest awards to recognize the many accomplishments of UNT faculty.</p></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://scontent.ftrv3-1.fna.fbcdn.net/v/t1.6435-9/81362249_784298978717344_3809303896090738688_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lDWSk8o8kzkQ7kNvgFWNggD&_nc_ht=scontent.ftrv3-1.fna&oh=00_AYAXAop7h6VY2x2aG1WtBFxeBQw1QuvjRJCgcIxKDLwTfw&oe=6668494C" style="width:100%;height:500px;">
+            <div class="text"><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Aligarh, January 6: Dr Yasir Hasan Siddique, Department of Engineering,  was conferred with the 'Prof G K Manna Memorial Award 2019-2020'<br>
+                 for his work on 'Technical Products against the Neurodegenerative Disorders' during the 107th <br>
+                 Indian Science Congress which was inaugurated by Prime Minister,</p></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://media.licdn.com/dms/image/D5622AQEh1832GK5nCQ/feedshare-shrink_800/0/1712384775318?e=2147483647&v=beta&t=FgEOaDT5aGTrHJpo8DQ5qzCKH3Jx_4rGpeGTC0XS0Co" style="width:100%;height:500px;">
+            <div class="text"><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Dr. Tabassum Nawab, a faculty from the department of Engineering at JNMC,<br>
+                 has earned accolades at the 9th International Conference on  2023 in Kuala Lumpur</p></div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+   <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+
+    // Update text at different intervals
+    var texts = document.getElementsByClassName("text");
+    for (var j = 0; j < texts.length; j++) {
+        texts[j].style.display = "none";
+    }
+    if (slideIndex == 1) {
+        texts[0].style.display = "block";
+    } else if (slideIndex == 2) {
+        texts[1].style.display = "block";
+    } else if (slideIndex == 3) {
+        texts[2].style.display = "block";
+    } else if (slideIndex == 4) {
+        texts[3].style.display = "block";
+    }
+    // Add more conditions for additional slides
+}
+
+   </script> 
+   
+</body>
+</html>

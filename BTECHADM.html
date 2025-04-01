@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Admission</title>
+   
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        @keyframes slide {
+            from{
+                transform: translateX(300px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        .heading{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            animation-name:  slide;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay:0.5s;
+            float: right;
+        }
+        .NavAd{
+            width: 100%;
+            height: 700px;
+            background-image: url(https://webfiles.amrita.edu/2019/06/qPxKxByO-amrita-vishwa-vidyapeetham-ettimadai-campus-placement.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow: auto;
+            left:0%;
+        }
+        .NavAd a{
+            float: left;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .Implink{
+             
+            padding: 3px;
+             background-color: rgba(193, 6, 0, 0.654);
+             margin-left: auto;
+             margin-right: 100px;
+            
+             text-align: center;
+             justify-content: center;
+             align-items: center;
+             border-radius: 5px;
+             box-shadow: 5px rgb(255, 253, 253);
+             float:right;
+        }
+       
+        .sidebar {
+    width: 200px;
+    background-color: #e90f0f7a;
+    position:absolute;
+    top: 20%;
+    left: 0%;
+    bottom: 0%;
+    margin-left:10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar button {
+    display: block;
+    margin-bottom: 10px;
+    border:none;
+    font-size: large;
+    border-radius: 5px;
+    width:155px;
+    height: 55px;
+    color: aliceblue;
+    background-color: rgb(209, 0, 0);
+    text-align: center;
+    
+   
+}
+.sidebar button:hover{
+  width: 160px;
+  height: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ul{
+    list-style-type: none;
+}
+.AAT{
+    background-color: rgb(209, 0, 0);
+    border-color:rgb(209, 0, 0) ;
+  
+
+}
+.HomeP{
+    display:block;
+}
+.AAT:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#elig{
+        color:rgb(255, 200, 0);
+        font-family:monospace;
+        text-align: center;
+    }
+.Eligbox{
+    display:none;
+        float:right;
+        margin-right:50px;
+        background-color: rgb(155, 0, 0); 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width:40%;
+    }
+    .AdmDrp{
+        display: none;
+        margin-top:40px;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 10px;
+    }
+    .AdmDrp1{
+        display: none;
+        margin-top:40px;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 20px;
+    }
+    .AdmDrp a,.AdmDrp1 a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+   .AdB1:hover .AdmDrp{
+    display:block;
+   }
+   .AdB2:hover .AdmDrp1{
+    display:block;
+   }
+   #nav:hover{
+        background-color: rgba(32, 32, 32, 0.615);
+    }
+    #nav1:hover{
+        background-color: rgba(132, 132, 132, 0.615);
+    }
+    .Scholarships{
+            width:50%;
+            background-color: rgba(20, 20, 20, 0.651);
+            display: none;
+            float: right;
+            border-radius: 5px;
+            color:white;
+            margin-right: 10%;
+            padding:5px;
+        }
+        #yel{
+            background-color: rgb(155, 0, 0); 
+            border-radius: 5px;
+            padding:10px;
+            color:rgb(255, 255, 255);
+        }
+        td{
+            background-color: rgb(255, 243, 187);
+            border-radius: 5px;
+            padding:10px;
+            color:black;
+        }
+        .FeeStruct,.ImpDat{
+            display: none;
+            float: right;
+            margin-right: 10%;
+            background-color: rgba(8, 8, 8, 0.753);
+            padding: 5px;
+            width:50%;
+            color:#f1f1f1;
+        } 
+        .Y{
+        background-repeat: no-repeat;
+        background-image: url(https://media.gettyimages.com/id/1455946567/photo/college-instructor-assisting-electrical-engineering-students.jpg?s=612x612&w=gi&k=20&c=8-zcXsxvbViqnMdGOtwB5uJxF51Fq0Dv07YbfJ7_UW0=);
+        width:50%;
+        
+        
+    }
+    .YM{
+        background-color: rgba(183, 0, 0, 0.718);
+        height:100%;
+      
+    }
+    footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;}
+    .sub{
+ float: left; 
+}
+       
+    </style>
+</head>
+<body>
+    <div class="sub">
+        <img src="Logo pic.png" alt="Image" class="left-image" width="55" height="55">
+        
+    </div>
+    <h2 class="heading">BTech ADMISSION</h2>
+    <div class="NavAd">
+    <a href="MAIN_abt.html" id="nav"> Home</a> 
+    <div class="AdB2">
+        <a id="nav" class="AdB3"><button class="BA1" style="border:none;background-color: transparent;color: aliceblue;font-family: 'Times New Roman', Times, serif;font-size: 17px;">Academics</button>
+        <div class="AdmDrp1">
+            <a href="courses.html" id="nav1">B.Tech</a>
+            <a href="pgcourses.html" id="nav1">M.Tech</a>
+            <a href="phd.html" id="nav1">Doctral Programs</a>
+        </div> 
+        </a>
+    </div> 
+    
+    <div class="AdB1">
+        <a id="nav" class="AdB"><button class="BA" style="border:none;background-color: transparent;color: aliceblue;font-family: 'Times New Roman', Times, serif;font-size: 17px;">Admission</button>
+        <div class="AdmDrp">
+            <a href="#" id="nav1">B.Tech</a>
+            <a href="MTECHADM.html" id="nav1">M.Tech</a>
+            <a href="DOCTORAL.html" id="nav1">Doctral Programs</a>
+        </div> 
+        </a>
+    </div> 
+    <a href="#" id="nav">Alumni</a>
+    <a href="contact.html" id="nav">Contact</a><br><br><br>
+    <div class="sidebar">
+    <ul>
+        <li><button onclick="showDiv('HomeP')">Home</button></li><br>
+        <li><button onclick="showDiv('Eligbox')" type="button">Eligibility</button></li><br>
+        
+        <li><button onclick="showDiv('Scholarships')">Scholarships</button></li><br>
+        <li><button onclick="showDiv('FeeStruct')">Fee Structure</button></li><br>
+        <li><button onclick="showDiv('ImpDat')">Important dates</button></li>
+    </ul>
+    </div>
+    <div id="common" class="ImpDat">
+        <h2>Important Dates for First Degree Programme</h2>
+        <hr style="width: auto;">
+        <p>IMPORTANT DATES FOR FIRST DEGREE ADMISSION 2024-25</p>
+        <table>
+            <tr>
+                <td>EVENT</td>
+                <td>Date</td>
+            </tr>
+            <tr>
+                <td>Last date of Application</td>
+                <td>25june 2024</td>
+            </tr>
+            <tr>
+                <td>Reporting for Admission</td>
+                <td>27 Aug 2024</td>
+            </tr>
+            <tr>
+                <td>Orientation Programme</td>
+                <td>27-30 Aug</td>
+            </tr>
+            <tr>
+                <td>registration</td>
+                <td>30 Aug</td>
+            </tr>
+            <tr>
+                <td>Commencement of Classes</td>
+                <td>2 Sep 20204</td>
+            </tr>
+        </table>
+    </div>
+    <div id="common" class="FeeStruct">
+        <div>
+            <h3 style="color: #f1f1f1;">Fee Structure of First Degree Programme</h3>
+            <hr style="width:auto;background-color: rgb(255, 255, 255);height: 2px;">
+            <table class="FeeStruct1">
+                <tr>
+                    <td id="yel" style="padding:0px;border-radius: 0px;" colspan="2">A. One-time Fee</td>
+                    <td id="yel" style="padding:0px;border-radius: 0px;" colspan="2"> B. Tution Fees</td>
+                </tr>
+                <tr>
+                    <td>Application Fee*</td>
+                    <td>Rs.1000/-</td>
+                    <td>First Sem:</td>
+                    <td>Rs 5 lakh</td>
+                </tr>
+                <tr>
+                    <td>Admission Fee*</td>
+                    <td>Rs.1500/-</td>
+                    <td>2nd Sem:</td>
+                    <td>Rs 5 lakh</td>
+                </tr>
+                <tr>
+                    <td>Caution Fees*</td>
+                    <td>Rs 10,000/-</td>
+                    <td>Third Sem:</td>
+                    <td>Rs 4 lakh</td>
+                </tr>
+            </table>
+        </div>
+        <h4>Refund Policy</h4>
+        <ol>
+            <li>One-time
+                <ul>
+                    <li>
+                        Application fee and Admission Fee are non-refundable.
+                    </li>
+                    
+                </ul>
+            </li>
+            <li>
+                Application fee and Admission Fee are non-refundable. 
+                <ul type="circle">
+                   <li>If a student accepts the admission offer and completes the admission formalities but withdraws before the date of registration, 80% of the first installment of first semester tuition fee is refundable.</li> 
+                   <li>If a student withdraws within one week of the date of registration irrespective of whether the student registers or not, 50% of the first installment of first semester tuition fee is refundable.</li> 
+                   <li>If a student withdraws after one week of the date of registration irrespective of whether the student registers or not, the first installment of first semester tuition fee is non- refundable.</li>
+                </ul>
+                
+            </li>
+            
+        </ol>
+    </div>
+    <div id="common" class="Scholarships">
+        <ol type="1">
+            <li>Merit Scholarships for New Admissions
+                <ul>
+                    <li>
+                        <strong>Merit in Qualifying Exam:</strong>
+                        <p>Admitted candidates qualifying in one of the below category will be eligible for merit scholarship on tuition fees for first academic year while hostel concession will be offered for normal duration of the programme (4 years).</p>
+                        <table>
+                           <tr>
+                            <td id="yel">Sr.No</td>
+                            <td id="yel">Category</td>
+                            <td id="yel">Qualifying criteria</td>
+                            <td id="yel">Scholarship on Tution fees</td>
+                           </tr> 
+                           <tr>
+                            <td >1</td>
+                            <td >Board Topper</td>
+                            <td >1st position in Grade 12</td>
+                            <td >50% of first year fee</td>
+                           </tr> 
+                           <tr>
+                            <td rowspan="2">2</td>
+                            <td rowspan="2">Board marks</td>
+                            <td>>=95%</td>
+                            <td >40% of first year fee</td>
+                            
+                           </tr> 
+                           <tr>
+                            <td>90 to 94.9%</td>
+                            <td >40% of first year fee</td>
+                           </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <strong>Merit in AAT(Astar Aptitude Test) and JEE:</strong>
+                        <table>
+                            <tr>
+                                <td id="yel">S. No</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                
+                            </tr>
+                            <tr>
+                                <td id="yel">AAT</td>
+                                <td>>280</td>
+                                <td>216 to 280</td>
+                                <td>175 to 215</td>
+                            </tr>
+                            <tr>
+                                <td id="yel">JEE</td>
+                                <td>>90 percentile</td>
+                                <td>80 to 90</td>
+                                <td>70 to 80</td>
+                            </tr>
+                            <tr>
+                                <td id="yel">Scholarship</td>
+                                <td>70%</td>
+                                <td>50%</td>
+                                <td>30%</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div id="common" class="Eligbox">
+        <h1 id="elig">Eligibility criteria for B.Tech</h1>
+        <hr style="background-color: rgb(255, 200, 0); height: 1px;width: 300px;">
+        <ul>
+            <li><p>For admission to all first degree programmes, candidates must have passed the requisite qualifying examination, which is  All India senior school certificate examination of the Central Board of Secondary Education (CBSE) or A Level from Cambridge International examinations/ Edexcel or IB Diploma or its equivalent from any recognized State, National or International board.</p></li>
+            <li>The candidates must have obtained a minimum 60% overall aggregate of marks in the qualifying examination and a minimum aggregate of 60% in Physics, Mathematics and Chemistry/ Biology/ Computer Science or any other vocational subjects with at least 50% marks in each subject.</li><br>
+            <li>If instead of marks any letter grades or GPA are awarded (or any other system of evaluation), their equivalences in marks will be decided by the Admissions Committee. If a Candidate has secured less than 50% marks in any one of these subjects – Physics, Mathematics /Biology, but has passed in the subjects and meets the aggregate criteria mentioned above, he/she may be considered for provisional admission. The admission will be confirmed only upon the successful completion of a foundation course in that subject with a minimum grade of ‘C’, offered by the institute preferably before the commencement of the first semester.</li>
+        </ul>
+        </div>
+    <div id="common" class="HomeP" style="width:300px;text-align: centre;justify-content: center;float:right; margin-right:10px;margin-top:100px"><h1 style="color: aliceblue;">Admissions 2024-25 Open<br>Apply Now</h1>
+        <button type="button" class="AAT"><a href="AAT2.html" target="_blank">APPLY HERE</a></button></div>
+    </div>
+   </div>
+   <div style="float: right; padding:5px; width: 50%; height:317px;background-color: rgb(66, 66, 66);color: #f1f1f1;text-align: centre;">
+    <p style="font-size: large; margin-right: 20px;">Admission Enquiry</p>
+    <hr style="width:auto">
+    <div style="float:left;font-size: large;">
+        <p>Contact Us</p>
+        <ul style="list-style-type:circle;color:white;">
+            
+            <li>e-mail - astaram@gmail.com </li>
+            <li>Phone No- +91 54744746</li>
+            <br><br><br><br><br><br><br>
+        </ul>
+    </div>
+    </div>
+   <div class="Y">
+    <div class="YM">
+        <br><br>
+    <hr style="width:20px;height: 2px;border-radius: 2px;background-color: aliceblue; float:left;margin-left:10px;"><br>
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: aliceblue;">&nbspWHY ASTRA ?</h1>
+    <table >
+        <tr>
+            <td style="background-color: transparent;"><i class="fa fa-university fa-3x" aria-hidden="true" style="color: aliceblue;margin-left:30px;"></i></td>
+            <td style="background-color: transparent;"><p style="color:aliceblue">Top Rank University of India</p></td>
+        </tr>
+        <tr>
+            <td style="background-color: transparent;"></td>
+            <td style="background-color: transparent;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: transparent;"><i class="fa fa-tree fa-3x" aria-hidden="true" style="color: aliceblue;margin-left:30px;"></i></td>
+            <td style="background-color: transparent;"><p style="color:aliceblue">Ecofriendly structures <br>& scenic campus</p></td>
+        </tr>
+    </table>
+    </div>
+</div>  
+
+
+
+   <script>
+  function showDiv(divclass) {
+           var allDivs = document.querySelectorAll('#common')
+            for (var i = 0; i < allDivs.length; i++) {
+                allDivs[i].style.display = 'none'; // Hide all divs
+            }
+            var divsToShow = document.getElementsByClassName(divclass);
+            for (var j = 0; j < divsToShow.length; j++) {
+                divsToShow[j].style.display = 'block'; // Show the selected div
+            }
+        }
+</script> 
+
+<footer style="width:auto;">
+  <p>&copy; 2024 Astra College of Engineering. All rights reserved.</p>
+</footer>
+</body>
+</html>
